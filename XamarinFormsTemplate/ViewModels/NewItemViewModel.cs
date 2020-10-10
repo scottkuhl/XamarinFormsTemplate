@@ -1,9 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using System.Windows.Input;
-using XamarinFormsTemplate.Models;
 using Xamarin.Forms;
+using XamarinFormsTemplate.Models;
 
 namespace XamarinFormsTemplate.ViewModels
 {
@@ -16,14 +13,14 @@ namespace XamarinFormsTemplate.ViewModels
         {
             SaveCommand = new Command(OnSave, ValidateSave);
             CancelCommand = new Command(OnCancel);
-            this.PropertyChanged +=
+            PropertyChanged +=
                 (_, __) => SaveCommand.ChangeCanExecute();
         }
 
         private bool ValidateSave()
         {
-            return !String.IsNullOrWhiteSpace(text)
-                && !String.IsNullOrWhiteSpace(description);
+            return !string.IsNullOrWhiteSpace(text)
+                && !string.IsNullOrWhiteSpace(description);
         }
 
         public string Text
@@ -49,7 +46,7 @@ namespace XamarinFormsTemplate.ViewModels
 
         private async void OnSave()
         {
-            Item newItem = new Item()
+            var newItem = new Item()
             {
                 Id = Guid.NewGuid().ToString(),
                 Text = Text,

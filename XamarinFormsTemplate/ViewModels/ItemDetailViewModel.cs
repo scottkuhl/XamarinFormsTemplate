@@ -1,7 +1,5 @@
 ﻿using System;
 using System.Diagnostics;
-using System.Threading.Tasks;
-using XamarinFormsTemplate.Models;
 using Xamarin.Forms;
 
 namespace XamarinFormsTemplate.ViewModels
@@ -28,10 +26,7 @@ namespace XamarinFormsTemplate.ViewModels
 
         public string ItemId
         {
-            get
-            {
-                return itemId;
-            }
+            get => itemId;
             set
             {
                 itemId = value;

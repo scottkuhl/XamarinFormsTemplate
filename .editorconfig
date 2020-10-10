@@ -1,0 +1,12 @@
+[*.cs]
+
+# Implicit and explicit types
+csharp_style_var_for_built_in_types = true:suggestion
+csharp_style_var_when_type_is_apparent = true:suggestion
+csharp_style_var_elsewhere = true:suggestion
+
+# CA1034: Nested types should not be visible
+dotnet_diagnostic.CA1034.severity = none
+
+# CA2007: Consider calling ConfigureAwait on the awaited task
+dotnet_diagnostic.CA2007.severity = none

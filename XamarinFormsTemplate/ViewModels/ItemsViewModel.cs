@@ -30,7 +30,7 @@ namespace XamarinFormsTemplate.ViewModels
             AddItemCommand = new Command(OnAddItem);
         }
 
-        async Task ExecuteLoadItemsCommand()
+        private async Task ExecuteLoadItemsCommand()
         {
             IsBusy = true;
 
@@ -74,10 +74,12 @@ namespace XamarinFormsTemplate.ViewModels
             await Shell.Current.GoToAsync(nameof(NewItemPage));
         }
 
-        async void OnItemSelected(Item item)
+        private async void OnItemSelected(Item item)
         {
             if (item == null)
+            {
                 return;
+            }
 
             // This will push the ItemDetailPage onto the navigation stack
             await Shell.Current.GoToAsync($"{nameof(ItemDetailPage)}?{nameof(ItemDetailViewModel.ItemId)}={item.Id}");
