@@ -14,6 +14,7 @@ Starting Xamarin.Forms Shell template with UWP support
 
 To keep things consistent, the project uses the Visual Studio extensions for clean code listed above in Getting Started as well as:
 
+1. [Roslynator](https://github.com/JosefPihrt/Roslynator) - A extended collection of Rosyln analyzers.  It is included as a NuGet package.
 1. A starting .editorconfig file with minimal rule changes.
 
 

@@ -14,8 +14,7 @@
             <RowDefinition Height="Auto" />
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
-        <StackLayout HorizontalOptions="Fill"
-                     VerticalOptions="FillAndExpand">
+        <StackLayout HorizontalOptions="Fill" VerticalOptions="FillAndExpand">
             <StackLayout HorizontalOptions="Center"
                          VerticalOptions="Center"
                          Orientation="Horizontal">
