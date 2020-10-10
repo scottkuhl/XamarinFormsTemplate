@@ -12,12 +12,8 @@ namespace XamarinFormsTemplate.ViewModels
 {
     public class ItemsViewModel : BaseViewModel
     {
+        private bool _addItemCommandFired = false;
         private Item _selectedItem;
-
-        public ObservableCollection<Item> Items { get; }
-        public Command LoadItemsCommand { get; }
-        public Command AddItemCommand { get; }
-        public Command<Item> ItemTapped { get; }
 
         public ItemsViewModel()
         {
@@ -28,6 +24,27 @@ namespace XamarinFormsTemplate.ViewModels
             ItemTapped = new Command<Item>(OnItemSelected);
 
             AddItemCommand = new Command(OnAddItem);
+        }
+
+        public Command AddItemCommand { get; }
+        public ObservableCollection<Item> Items { get; }
+        public Command<Item> ItemTapped { get; }
+        public Command LoadItemsCommand { get; }
+
+        public Item SelectedItem
+        {
+            get => _selectedItem;
+            set
+            {
+                SetProperty(ref _selectedItem, value);
+                OnItemSelected(value);
+            }
+        }
+
+        public void OnAppearing()
+        {
+            IsBusy = true;
+            SelectedItem = null;
         }
 
         private async Task ExecuteLoadItemsCommand()
@@ -53,25 +70,14 @@ namespace XamarinFormsTemplate.ViewModels
             }
         }
 
-        public void OnAppearing()
-        {
-            IsBusy = true;
-            SelectedItem = null;
-        }
-
-        public Item SelectedItem
-        {
-            get => _selectedItem;
-            set
-            {
-                SetProperty(ref _selectedItem, value);
-                OnItemSelected(value);
-            }
-        }
-
         private async void OnAddItem(object obj)
         {
-            await Shell.Current.GoToAsync(nameof(NewItemPage));
+            // HACK: https://github.com/xamarin/Xamarin.Forms/issues/10136
+            if (!_addItemCommandFired)
+            {
+                await Shell.Current.GoToAsync(nameof(NewItemPage));
+                _addItemCommandFired = true;
+            }
         }
 
         private async void OnItemSelected(Item item)
