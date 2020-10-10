@@ -15,6 +15,7 @@ namespace XamarinFormsTemplate.ViewModels
         public IDataStore<Item> DataStore => DependencyService.Get<IDataStore<Item>>();
 
         private bool isBusy = false;
+
         public bool IsBusy
         {
             get => isBusy;
@@ -22,6 +23,7 @@ namespace XamarinFormsTemplate.ViewModels
         }
 
         private string title = string.Empty;
+
         public string Title
         {
             get => title;
@@ -44,7 +46,9 @@ namespace XamarinFormsTemplate.ViewModels
         }
 
         #region INotifyPropertyChanged
+
         public event PropertyChangedEventHandler PropertyChanged;
+
         protected void OnPropertyChanged([CallerMemberName] string propertyName = "")
         {
             var changed = PropertyChanged;
@@ -55,6 +59,7 @@ namespace XamarinFormsTemplate.ViewModels
 
             changed.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
-        #endregion
+
+        #endregion INotifyPropertyChanged
     }
 }

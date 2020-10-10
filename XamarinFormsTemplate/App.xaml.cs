@@ -5,7 +5,6 @@ namespace XamarinFormsTemplate
 {
     public partial class App : Xamarin.Forms.Application
     {
-
         public App()
         {
             InitializeComponent();
