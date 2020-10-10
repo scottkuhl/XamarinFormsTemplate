@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Ardalis.GuardClauses;
+using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using XamarinFormsTemplate.Models;
@@ -24,6 +25,8 @@ namespace XamarinFormsTemplate.Services
 
         public async Task<bool> AddItemAsync(Item item)
         {
+            Guard.Against.Null(item, nameof(item));
+
             items.Add(item);
 
             return await Task.FromResult(true);
@@ -31,6 +34,8 @@ namespace XamarinFormsTemplate.Services
 
         public async Task<bool> DeleteItemAsync(string id)
         {
+            Guard.Against.NullOrEmpty(id, nameof(id));
+
             var oldItem = items.Find((Item arg) => arg.Id == id);
             items.Remove(oldItem);
 
@@ -39,6 +44,8 @@ namespace XamarinFormsTemplate.Services
 
         public async Task<Item> GetItemAsync(string id)
         {
+            Guard.Against.NullOrEmpty(id, nameof(id));
+
             return await Task.FromResult(items.Find(s => s.Id == id));
         }
 
@@ -49,6 +56,8 @@ namespace XamarinFormsTemplate.Services
 
         public async Task<bool> UpdateItemAsync(Item item)
         {
+            Guard.Against.Null(item, nameof(item));
+
             var oldItem = items.Find((Item arg) => arg.Id == item.Id);
             items.Remove(oldItem);
             items.Add(item);

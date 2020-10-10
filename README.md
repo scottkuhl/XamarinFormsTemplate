@@ -18,4 +18,8 @@ To keep things consistent, the project uses the Visual Studio extensions for cle
 1. [Roslynator](https://github.com/JosefPihrt/Roslynator) - A extended collection of Rosyln analyzers.  It is included as a NuGet package.
 1. A starting .editorconfig file with minimal rule changes.
 
+## Core Functionality
+
+- **Guard clauses** are available using the [Ardalis.GuardClauses](https://github.com/ardalis/guardclauses) NuGet package.
+
 
