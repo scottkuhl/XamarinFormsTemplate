@@ -1,6 +1,8 @@
 ﻿using Xamarin.Forms;
 using XamarinFormsTemplate.Services;
 
+// TODO: Replace all instances of XamarinFormsTemplate with your application name through the entire solution.
+
 namespace XamarinFormsTemplate
 {
     public partial class App : Xamarin.Forms.Application
@@ -13,7 +15,7 @@ namespace XamarinFormsTemplate
             MainPage = new AppShell();
         }
 
-        protected override void OnStart()
+        protected override void OnResume()
         {
         }
 
@@ -21,7 +23,7 @@ namespace XamarinFormsTemplate
         {
         }
 
-        protected override void OnResume()
+        protected override void OnStart()
         {
         }
     }
