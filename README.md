@@ -22,4 +22,27 @@ To keep things consistent, the project uses the Visual Studio extensions for cle
 
 - **Guard clauses** are available using the [Ardalis.GuardClauses](https://github.com/ardalis/guardclauses) NuGet package.
 
+## Learning Resources
 
+If you have never programmed in C# before try one of these paths:
+
+- [LaunchCode](https://www.launchcode.org/) offers a complete and free programming course online that is the same version students take.
+You can begin with a [Discovery](https://stepik.org/course/4261/promo#toc) course if you have never programmed before, 
+move on to the [Intro to Web Development](https://education.launchcode.org/intro-to-professional-web-dev/) which teaches you the basics of programming in JavaScript 
+and conclude with the [C# Web Development](https://education.launchcode.org/csharp-web-development/) course. 
+While these courses teach web development they also teach you the basics of programming that you will need along the way.
+There is even a [Liftoff](https://education.launchcode.org/liftoff/) course you can follow along with after learning Xamarin Forms to build your own project and practice your skills.
+
+- Xamarin University is no more, but their C# course is still available on YouTube along with exercises on [GitHub](https://github.com/XamarinUniversity).
+The C# introduction course lessons are in the [Xamarin C# Course](https://www.youtube.com/playlist?list=PLq-muhRbo9by_BBIHIsH9wsfwO7tc469x) playlist.
+
+- Bob Tabor's ever evolving yet still classic course, [C# Fundamentals for Absolute Beginners](https://channel9.msdn.com/Series/CSharp-Fundamentals-for-Absolute-Beginners), is available on Channel 9.
+
+If you have programmed in C# but are new to Xamarin, try one of these options:
+
+- The Xamarin University course on Xamarin Forms is also still available on YouTube along with exercises on [GitHub](https://github.com/XamarinUniversity).
+Those course lessons are in the [Xamarin Forms Course](https://www.youtube.com/playlist?list=PLq-muhRbo9bwTS9bgshpcs90oGYtzdaeT) playlist.
+
+- Microsoft Learn has created a [learning path](https://docs.microsoft.com/en-us/learn/browse/?expanded=dotnet&products=xamarin&resource_type=learning%20path) for Xamarin Forms.
+
+An ongoing wealth of growing information is also available at [Awesome Xamarin Forms](https://github.com/jsuarezruiz/awesome-xamarin-forms).
