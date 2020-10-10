@@ -10,6 +10,7 @@ Starting Xamarin.Forms Shell template with UWP support
 1. Install the [XAML Styler](https://github.com/Xavalon/XamlStyler) extension. The solution folder contains a configuration developed by [SharpNado](https://www.sharpnado.com/xamarin-forms-xamlstyler-config/) specifically for Xamarin Forms.
 1. Install the [Code Cleanup on Save](https://github.com/madskristensen/CodeCleanupOnSave) extension. Setup a clean up profile that has all options applied. Unfortunately at this time, these options can't be stored in a solution.
 1. Clone your new repo to your local machine.
+1. Complete all the TODO comments.
 
 ## Clean Code
 

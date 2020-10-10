@@ -1,5 +1,8 @@
 ﻿using UIKit;
 
+// TODO: Change the application name under Info.plist.
+// TODO: Change the bundle identifier under Info.plist.
+
 namespace XamarinFormsTemplate.iOS
 {
     public class Application
