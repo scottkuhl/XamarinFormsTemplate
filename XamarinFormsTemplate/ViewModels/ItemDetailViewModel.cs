@@ -8,9 +8,16 @@ namespace XamarinFormsTemplate.ViewModels
     [QueryProperty(nameof(ItemId), nameof(ItemId))]
     public class ItemDetailViewModel : BaseViewModel
     {
+        private string addedOn;
         private string description;
         private string itemId;
         private string text;
+
+        public string AddedOn
+        {
+            get => addedOn;
+            set => SetProperty(ref addedOn, value);
+        }
 
         public string Description
         {
@@ -46,6 +53,7 @@ namespace XamarinFormsTemplate.ViewModels
                 Id = item.Id;
                 Text = item.Text;
                 Description = item.Description;
+                AddedOn = item.AddedOnText;
             }
             catch (Exception)
             {

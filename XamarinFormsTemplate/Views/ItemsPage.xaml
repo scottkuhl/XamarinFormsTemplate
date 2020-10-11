@@ -28,6 +28,10 @@
                                FontSize="13"
                                LineBreakMode="NoWrap"
                                Text="{Binding Description}" />
+                        <Label Style="{DynamicResource ListItemDetailTextStyle}"
+                               FontSize="13"
+                               LineBreakMode="NoWrap"
+                               Text="{Binding AddedOnText}" />
                         <StackLayout.GestureRecognizers>
                             <TapGestureRecognizer NumberOfTapsRequired="1"
                                                   Command="{Binding Source={RelativeSource AncestorType={x:Type local:ItemsViewModel}}, Path=ItemTapped}"

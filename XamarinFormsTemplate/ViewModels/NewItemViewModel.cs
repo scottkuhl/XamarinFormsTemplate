@@ -6,8 +6,8 @@ namespace XamarinFormsTemplate.ViewModels
 {
     public class NewItemViewModel : BaseViewModel
     {
-        private string text;
         private string description;
+        private string text;
 
         public NewItemViewModel()
         {
@@ -17,17 +17,7 @@ namespace XamarinFormsTemplate.ViewModels
                 (_, __) => SaveCommand.ChangeCanExecute();
         }
 
-        private bool ValidateSave()
-        {
-            return !string.IsNullOrWhiteSpace(text)
-                && !string.IsNullOrWhiteSpace(description);
-        }
-
-        public string Text
-        {
-            get => text;
-            set => SetProperty(ref text, value);
-        }
+        public Command CancelCommand { get; }
 
         public string Description
         {
@@ -36,7 +26,12 @@ namespace XamarinFormsTemplate.ViewModels
         }
 
         public Command SaveCommand { get; }
-        public Command CancelCommand { get; }
+
+        public string Text
+        {
+            get => text;
+            set => SetProperty(ref text, value);
+        }
 
         private async void OnCancel()
         {
@@ -50,13 +45,20 @@ namespace XamarinFormsTemplate.ViewModels
             {
                 Id = Guid.NewGuid().ToString(),
                 Text = Text,
-                Description = Description
+                Description = Description,
+                AddedOn = DateTime.Now
             };
 
             await DataStore.AddItemAsync(newItem);
 
             // This will pop the current page off the navigation stack
             await Shell.Current.GoToAsync("..");
+        }
+
+        private bool ValidateSave()
+        {
+            return !string.IsNullOrWhiteSpace(text)
+                && !string.IsNullOrWhiteSpace(description);
         }
     }
 }

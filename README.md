@@ -22,6 +22,7 @@ To keep things consistent, the project uses the Visual Studio extensions for cle
 ## Core Functionality
 
 - **Guard clauses** are available using the [Ardalis.GuardClauses](https://github.com/ardalis/guardclauses) NuGet package.
+- **Human readable value manipulation** are available with the [Humanizer](https://github.com/Humanizr/Humanizer) NuGet packager.  (Only the English language package is included.)
 
 ## Learning Resources
 
